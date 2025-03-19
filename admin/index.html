@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBT Chicken Food</title>
+    <script src="/assest/admin/js/bootstrap.bundle.min.js?v=1"></script>
+    <link rel="stylesheet" href="/assest/admin/css/bootstrap.min.css?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">NBT Chicken Food</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="#orders" class="list-group-item list-group-item-action active" data-bs-toggle="tab">Quản lý đơn hàng</a>
+                    <a href="#inventory" class="list-group-item list-group-item-action" data-bs-toggle="tab">Quản lý sản phẩm</a>
+                    <a href="#customers" class="list-group-item list-group-item-action" data-bs-toggle="tab">Quản lý khách hàng</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="orders">
+                        <h3>Đơn hàng</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Mã đơn</th>
+                                    <th>Khách hàng</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Số lượng</th>
+                                    <th>Trạng thái</th>
+                                    <th>Thao tác</th>
+                                </tr> 
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-success">#001</span></td>
+                                    <td>John Doe</td>
+                                    <td>Grilled Chicken</td>
+                                    <td>$20.00</td>
+                                    <td>2</td>
+                                    <td><span class="badge bg-info">Processing</span></td>
+                                    <td>
+                                        <button class="btn btn-primary">Chi tiết</button>
+                                        <button class="btn btn-success">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="inventory">
+                        <h3>Sản phẩm</h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Mã sản phẩm</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Giá</th>
+                                    <th>Số lượng</th>
+                                    <th>Trạng thái</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-success">#001</span></td>
+                                    <td>Chicken Wings</td>
+                                    <td>50</td>
+                                    <td>100</td>
+                                    <td><span class="badge bg-info">Còn hàng</span></td>
+                                    <td>
+                                        <button class="btn btn-primary">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="badge bg-success">#001</span></td>
+                                    <td>Chicken Wings</td>
+                                    <td>50</td>
+                                    <td>100</td>
+                                    <td><span class="badge bg-info">Còn hàng</span></td>
+                                    <td>
+                                        <button class="btn btn-primary">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="customers">
+                        <h3>Khách hàng<button class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-plus"></i> Thêm khách hàng</button></h3>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Mã khách hàng</th>
+                                    <th>Tên khách hàng</th>
+                                    <th>Số điện thoại</th>
+                                    <th>Email</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="badge bg-success">#001</span></td>
+                                    <td>Jane Doe</td>
+                                    <td>0909090909</td>
+                                    <td>jane@example.com</td>
+                                    <td><textarea name="" id="" cols="30" rows="4">Ho CHi Minh City</textarea></td>
+                                    <td>
+                                        <button class="btn btn-primary">Sửa</button>
+                                        <button class="btn btn-danger">Xóa</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
