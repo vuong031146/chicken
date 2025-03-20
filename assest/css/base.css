@@ -143,32 +143,3 @@ html{
     margin-left: 4px;
 }
 
-.call-now{
-    position: fixed;
-    content: "";
-    padding: 20px 20px;
-    border-radius: 50%;
-    background-color: var(--black-color);
-    left: 20px;
-    bottom: 60px;
-    z-index: 999;
-    transition: 0.4s;
-}
-
-.call-now .footer-icon{
-    width: 0%;
-    margin: 0;
-    padding: 0;
-    transition: 0.4s;
-    font-size: 16px;
-}
-
-.call-now:hover{
-    padding: 30px 30px;
-    transition: 0.4s;
-}
-
-.call-now:hover .footer-icon{
-    font-size: 24px;
-    transition: 0.4s;
-}

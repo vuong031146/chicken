@@ -1,57 +1,5 @@
-const searchBtn = document.querySelector('.icon-header-js');
-const closeBtn = document.querySelector('.icon-close-js');
-const headerSearch = document.querySelectorAll('.header-search-js');
 
-// hàm hiển thị search
-function showSearch() {
-    headerSearch.forEach(function(item){
-        item.classList.add('open')
-    })
-    hideIconSearch(); // Đảm bảo biểu tượng được cập nhật thành close khi hiển thị tìm kiếm
-}
 
-// hàm ẩn search
-function hideSearch() {
-    headerSearch.forEach(function(item){
-        item.classList.remove('open')
-    })
-    hideIconClose(); // Đảm bảo biểu tượng được cập nhật thành search khi ẩn tìm kiếm
-}
-
-// hàm này đổi icon search thành icon close
-function hideIconSearch() {
-    searchBtn.classList.remove('fa-magnifying-glass');
-    searchBtn.classList.add('fa-xmark');
-}
-
-//hàm này đổi icon close thành icon search
-function hideIconClose() {
-    searchBtn.classList.remove('fa-xmark');
-    searchBtn.classList.add('fa-magnifying-glass');
-}
-// hàm click nút search
-searchBtn.addEventListener('click', function() {
-    if (headerSearch[0].classList.contains('open')) { // Kiểm tra nếu thanh tìm kiếm đã mở
-        hideSearch();
-    } else {
-        showSearch();
-    }
-});
-
-// bag shoping
-const bagBtn = document.querySelector('.icon-shoping-js');
-const shopingBag = document.querySelector('.header-bag-js');
-const closeShoping = document.querySelector('.close-icon-js')
-function showShoping(){
-    shopingBag.classList.add('active')
-}
-
-function hideShoping(){
-    shopingBag.classList.remove('active')
-}
-
-bagBtn.addEventListener('click', showShoping);
-closeShoping.addEventListener('click', hideShoping);
 
 // animation khi bắt đầu cuộn chuột
 const navigation = document.querySelector('.navigation');
@@ -75,28 +23,6 @@ const barbtn = document.querySelector('.icon-header-bar')
 const modal = document.querySelector('.navigation-mobile')
 const modalContainer = document.querySelector('.navigation-container-js')
 const closeModal = document.querySelector('.mobile-icon-close')
-
-//hàm hiển thị modal
-function showModal() {
-    modalContainer.classList.add("active")
-}
-
-//hàm ẩn modal
-function hideModal() {
-    modalContainer.classList.remove("active")
-}
-
-//lắng nghe hành vi click 
-barbtn.addEventListener('click',showModal);
-
-//lắng nghe hành vi nút close
-closeModal.addEventListener('click', hideModal);
-
-modalContainer.addEventListener('click', hideModal)
-
-modal.addEventListener('click',function(event){
-    event.stopPropagation();
-})
 
 
 // lấy dữ liệu của các product về
@@ -227,68 +153,3 @@ if(url.includes('index.html')){
         handleEventChangeSlide = setInterval(handleChangeSlide , 40000 )
     })
 }
-
-
-// xử lý sự kiện header-search
-document.addEventListener('DOMContentLoaded', function () {
-    const inputSearch = document.querySelector('.input-search-js');
-    const searchResults = document.querySelector('.search-results');
-
-    // Dữ liệu mẫu của danh sách món ăn (có thể thay bằng dữ liệu thực tế)
-    const foodItems = [
-        'CÁNH GÀ 2 VỊ',
-        'GÀ RÁN NỬA CON',
-        'GÀ RÁN SỐT NƯỚC TƯƠNG',
-        'CÁNH GÀ 3 VỊ',
-        'GÀ RÁN KHÔNG XƯƠNG',
-        'GÀ RÁN SỐT HÀNH PANDAK - 2 VỊ',
-        'GÀ SỐT NGỌT',
-        'KHOAI TÂY CHÊN',
-        'HÀNH TRỘN',
-        'SALAD DẦU GIẤM',
-        'GÀ VIÊN',
-        'KEM TƯƠI',
-        'BÁNH TRỨNG',
-        'PHÔ MAI QUE'
-    ];
-
-    // Xử lý sự kiện khi người dùng nhập vào ô tìm kiếm
-    inputSearch.addEventListener('input', function () {
-        const searchTerm = inputSearch.value.trim().toLowerCase();
-        // pt filter lọc mãng thỏa điều kiển và trả về 1 mảng mới
-        const filteredFoodItems = foodItems.filter(function(item){
-            return item.toLowerCase().includes(searchTerm) //hàm includes xử lý xem mỗi mục có chứa searchterm hay không nếu có thì trả về phần tử
-                                                           // và tạo ra mảng mới từ phương thức filter
-        });
-        
-        // Hiển thị danh sách kết quả tìm kiếm
-        renderSearchResults(filteredFoodItems);
-    });
-
-    // Xử lý sự kiện khi người dùng xóa nội dung trong ô tìm kiếm
-    inputSearch.addEventListener('keyup', function (event) {
-        if (inputSearch.value.trim() === '') {
-            searchResults.innerHTML = ''; // Xóa danh sách kết quả tìm kiếm khi input rỗng
-        }
-    });
-
-
-    // Xử lý sự kiện khi click ra ngoài ô tìm kiếm
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.header-search')) {
-            searchResults.innerHTML = ''; // Xóa danh sách kết quả tìm kiếm khi click ra ngoài
-        }
-    });
-
-    // Hàm hiển thị danh sách kết quả tìm kiếm
-    function renderSearchResults(results) {
-        if (results.length) {
-            const html = results.map(function(item){
-                return `<div class="search-item">${item}</div>`
-            }).join('');
-            searchResults.innerHTML = html;
-        } else {
-            searchResults.innerHTML = '<div class="search-item">Không có kết quả</div>';
-        }
-    }
-});
