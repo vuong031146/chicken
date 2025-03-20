@@ -8,6 +8,14 @@ require_once 'layouts/header.php';
 $acc = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM `customers` WHERE `username` = '{$_SESSION['username']}'"));
 $user_id = $acc['id'];
 $total = 0;
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    $sql = "DELETE FROM `cart` WHERE `customer_id` = '$user_id' AND `product_id` = '$id'";
+    mysqli_query($conn, $sql);
+    die("<script>Swal.fire('Thông báo','Đã xóa sản phẩm khỏi giỏ hàng','success'); setTimeout(() => {
+        window.location.href = '/cart.php';
+    }, 1000);</script>");
+} 
 ?>
 <div class="content content-background-color margin-top" style="">
     <div class="container">
@@ -45,7 +53,7 @@ $total = 0;
                                 <td><?= $row['quantity'] ?></td>
                                 <td><?= number_format($product['price']) ?>đ</td>
                                 <td><?= number_format($product['price'] * $row['quantity']) ?>đ</td>
-                                <td><a href="api/cart.php?id=<?= $product['id'] ?>" class="cart-delete">Xóa</a></td>
+                                <td><a href="/cart.php?id=<?= $product['id'] ?>" class="cart-delete">Xóa</a></td>
                             </tr>
                             <?php
                             }
