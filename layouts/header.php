@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicken Fried</title>
-    <link rel="stylesheet" href="/assest/css/base.css">
-    <link rel="stylesheet" href="/assest/css/grid.css?v=1.0.1">
-    <link rel="stylesheet" href="/assest/css/style.css?v=1.0.1">
-    <link rel="stylesheet" href="/assest/css/reponsive.css">
+    <link rel="stylesheet" href="/assest/css/base.css?=<?= time(); ?>">
+    <link rel="stylesheet" href="/assest/css/grid.css?=<?= time(); ?>">
+    <link rel="stylesheet" href="/assest/css/style.css?=<?= time(); ?>">
+    <link rel="stylesheet" href="/assest/css/reponsive.css?=<?= time(); ?>">
+    <link rel="stylesheet" href="/assest/css/custom.css?=<?= time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.1/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />

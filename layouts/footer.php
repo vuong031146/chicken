@@ -1,6 +1,15 @@
-<a href="tel: +84 815312850" class="call-now">
-            <i class="footer-icon fa-solid fa-phone-volume center"></i>
-        </a>
+
+<div class="hotline-phone-ring-wrap">
+    <div class="hotline-phone-ring">
+        <div class="hotline-phone-ring-circle"></div>
+        <div class="hotline-phone-ring-circle-fill"></div>
+        <div class="hotline-phone-ring-img-circle">
+            <a href="tel:<?= $system['phone'] ?>" class="pps-btn-img"> <img src="https://nguyenvandinh.com/Content/template/ANThanhs/images/icon-call-nh.png" alt="Gọi điện thoại" width="70"> </a>
+        </div>
+    </div>
+    <!-- <div class="hotline-bar"> <a href="tel:<?= $system['phone'] ?>"><span class="text-hotline">Call Now</span></a> </div> -->
+</div>
+
         <div class="footer">
             <div class="grid wide">
                 <div class="footer-content row">
@@ -25,6 +34,8 @@
                             </li>
                         </ul>
                     </div>
+
+                    
 
                     <div class="col div-item l-3 m-6 c-12">
                         <h3 class="footer-header">Thông Tin</h3>
@@ -54,13 +65,16 @@
                                 <img src="/assest/img/momo.png" alt="" class="img-footer">
                             </li>
                             <li class="footer-item">
-                                <img src="/assest/img/credict-card.png" alt="" class="img-footer">
+                                <img src="/assest/img/mastercard.jpg" alt="" class="img-footer">
                             </li>
                             <li class="footer-item">
                                 <img src="/assest/img/visa.png" alt="" class="img-footer">
                             </li>
                             <li class="footer-item">
                                 <img src="/assest/img/shoppePay.png" alt="" class="img-footer">
+                            </li>
+                            <li class="footer-item">
+                                <img src="/assest/img/bevu.jpg" alt="" class="img-footer">
                             </li>
                         </ul>
                         <h3 class="footer-header">Đơn Vị Vận CHuyển</h3>

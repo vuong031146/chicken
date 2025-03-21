@@ -49,16 +49,18 @@ if(isset($_POST['add_to_cart'])){
                                 </div>
                             </div>
                             <form action="#" method="post">
-                                <div>
-                                    <div class="quantity">
-                                        <p class="">Số lượng: </p>
-                                        <div class="select-amount">
-                                       
-                                        <input type="text" id="quantity" name="quantity" value="1" min="1" inputmode="numeric" pattern="[0-9]*">
-                                        
-                                    </div>
-                                </div>
-                                <button class="product-detail-btn" name="add_to_cart" type="submit">Thêm vào giỏ hàng</button>
+    <div>
+        <div class="quantity">
+            <p class="">Số lượng: </p>
+            <div class="select-amount" style="display: flex; align-items: center; gap: 5px;">
+                <button type="button" class="qty-btn" onclick="thaydoiSoLuong(-1)">-</button>
+                <input type="text" id="quantity" name="quantity" value="1" min="1" inputmode="numeric" pattern="[0-9]*" style="width: 50px; text-align: center;">
+                <button type="button" class="qty-btn" onclick="thaydoiSoLuong(1)">+</button>
+            </div>
+        </div>
+        <button class="product-detail-btn" name="add_to_cart" type="submit">Thêm vào giỏ hàng</button>
+    </div>
+</form>
                             </div>
                         </div>
                     </div>
@@ -66,4 +68,13 @@ if(isset($_POST['add_to_cart'])){
                 
             </div>
         </div>
+        <script>
+    function thaydoiSoLuong(change) {
+        const input = document.getElementById("quantity");
+        let hientai = parseInt(input.value) || 1;
+        hientai += change;
+        if (hientai < 1) hientai = 1;
+        input.value = hientai;
+    }
+</script>
 <?php include_once 'layouts/footer.php'; ?>

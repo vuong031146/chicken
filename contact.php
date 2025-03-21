@@ -65,7 +65,7 @@ if ($msg) {
             <div class="modal-background">
                 <div class="grid wide">
                     <div class="modal-container">
-                        <h2 class="modal-header">GỬI LIÊN HỆ QUA EMAIL</h2>
+                        <h2 class="modal-header">LIÊN HỆ QUA EMAIL</h2>
                         <form action="#" method="POST">    
                             <div class="row sm-gutter">
                                 <div class="col l-o-2 l-4 m-12 c-12">

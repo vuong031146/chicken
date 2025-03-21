@@ -57,7 +57,7 @@ require_once 'layouts/header.php';
 
                 <div class="reason">
                     
-                    <h4 class="first-reason">TẠI SAO NÊN ĐẾN VỚI <span class="reason-name"><?= $system['name'] ?></span></h4>
+                    <h4 class="first-reason">TẠI SAO NÊN ĐẾN VỚI <span class="reason-name "><?= $system['name'] ?></span></h4>
                     <ul class="row sm-gutter list-reason">
                         <li class="item-reason l-4 m-12 c-12">
                             <img src="https://file.hstatic.net/200000585055/file/cach-nhan-biet-thit-ga-hong-the-gioi-thit-3a_-min_76e6c249a7bb4d72bab28b0410d8a0e5_grande.jpeg" alt="" class="reason-img">
@@ -71,7 +71,7 @@ require_once 'layouts/header.php';
                         </li>
                         <li class="item-reason l-4 m-12 c-12">
                             <img src="https://cdn.tgdd.vn/2021/10/CookDish/8-cach-pha-sot-cham-thit-nuong-thom-ngon-avt-1200x676.jpg" alt="" class="reason-img">
-                            <h3 class="sub-reason">SỐT BÍ MẬT</h3>
+                            <h3 class="sub-reason">SỐT GIA TRUYỀN</h3>
                             <p class="text-reason">Chúng tôi sử dụng sốt bí mật đặc biệt, không chỉ vậy mà còn phù hợp nhiều lứa tuổi</p>
                         </li>
                     </ul>
