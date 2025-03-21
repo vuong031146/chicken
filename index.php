@@ -20,7 +20,7 @@ require_once 'layouts/header.php';
                         while ($row = mysqli_fetch_assoc($result)) {
                         ?>
                         <li class="col product l-4 m-6 c-12 border-sale">
-                            <a href="./DetaiProduct.html" class="product-link">
+                            <a href="DetaiProduct.php?id=<?= $row['id'] ?>" class="product-link">
                                 <img src="<?= $row['image_url'] ?>" alt="" class="product-img margin-bottom-44">
                                 <h3 class="product-name"><?= $row['name'] ?></h3>
                                 <h4 class="product-type"><?= $row['category'] == '1' ? 'Món chính' : 'Món phụ' ?></h4>
