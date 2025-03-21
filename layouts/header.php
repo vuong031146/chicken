@@ -64,7 +64,7 @@
                     <ul class="navigation-right">
                     
                     <li class="navigation-item">
-                            <a href="https://zalo.me/<?= $system['phone'] ?>" class="navigation-link">
+                            <a href="/contact.php" class="navigation-link">
                                 LIÊN HỆ
                             </a>
                         </li>
@@ -86,7 +86,6 @@
                                 
                             <li class="icon-bag">
     <?php 
-    // Kiểm tra xem người dùng có đăng nhập hay không
     if (empty($_SESSION['username'])) { 
     ?>
         <a href="#" onclick="Swal.fire({
@@ -106,12 +105,12 @@
         $sql = "SELECT COUNT(*) as cart_count FROM `cart` WHERE `customer_id` = '$user_id'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
-        $cart_count = $row['cart_count']; // Số lượng sản phẩm trong giỏ hàng
+        $cart_count = $row['cart_count'];
 
         if ($cart_count > 0) {
             echo '<a href="/cart.php">';
             echo '<i class="icon-header-shoping icon-shoping-js fa-solid fa-bag-shopping"></i>';
-            echo '<span class="badge">' . $cart_count . '</span>'; // Hiển thị số lượng sản phẩm
+            echo '<span class="badge">' . $cart_count . '</span>';
             echo '</a>';
         } else {
             echo '<a href="/cart.php">';
@@ -121,10 +120,7 @@
     } 
     ?>
 </li>
-
-
-
-                                <li class="icon-bar">
+                             <li class="icon-bar">
                                     <i class="icon-header icon-header-bar fa-solid fa-bars"></i>
                                     <div class="navigation-container navigation-container-js">
                                         <div class="navigation-mobile">

@@ -5,8 +5,8 @@ if(isset($_SESSION['username'])){
     exit();
 }
 if(isset($_POST['login'])){
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
     $sql = "SELECT * FROM customers WHERE username = '{$username}'";
     $result = mysqli_query($conn, $sql);
     $data = mysqli_fetch_assoc($result);

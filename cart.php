@@ -16,6 +16,7 @@ if(isset($_GET['id'])){
         window.location.href = '/cart.php';
     }, 1000);</script>");
 } 
+
 ?>
 <div class="content content-background-color margin-top" style="">
     <div class="container">
