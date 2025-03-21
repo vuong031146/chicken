@@ -111,4 +111,5 @@
             </div>
         </div>
         <script src="/assest/main.js?v=1.0.2"></script>    
+        <script src="/assest/custom.js?v=<?= time() ?>"></script>
     </div>
