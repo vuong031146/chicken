@@ -10,7 +10,7 @@ $user_id = $acc['id'];
 $total = 0;
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $sql = "DELETE FROM `cart` WHERE `customer_id` = '$user_id' AND `product_id` = '$id'";
+    $sql = "DELETE FROM `cart` WHERE `customer_id` = '$user_id' AND `id` = '$id'";
     mysqli_query($conn, $sql);
     die("<script>Swal.fire('Thông báo','Đã xóa sản phẩm khỏi giỏ hàng','success'); setTimeout(() => {
         window.location.href = '/cart.php';
@@ -54,7 +54,7 @@ if(isset($_GET['id'])){
                                 <td><?= $row['quantity'] ?></td>
                                 <td><?= number_format($product['price']) ?>đ</td>
                                 <td><?= number_format($product['price'] * $row['quantity']) ?>đ</td>
-                                <td><a href="/cart.php?id=<?= $product['id'] ?>" class="cart-delete">Xóa</a></td>
+                                <td><a href="/cart.php?id=<?= $row['id'] ?>" class="cart-delete">Xóa</a></td>
                             </tr>
                             <?php
                             }

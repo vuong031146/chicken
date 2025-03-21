@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chicken Fried</title>
+    <title><?= $system['title'] ?></title>
+    <meta name="description" content="<?= $system['keyword'] ?>">
+    <meta name="keywords" content="<?= $system['keyword'] ?>">
     <link rel="stylesheet" href="/assest/css/base.css?=<?= time(); ?>">
     <link rel="stylesheet" href="/assest/css/grid.css?=<?= time(); ?>">
     <link rel="stylesheet" href="/assest/css/style.css?=<?= time(); ?>">
